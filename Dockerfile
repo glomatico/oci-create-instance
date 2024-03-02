@@ -2,10 +2,6 @@ FROM python:3.7
 
 WORKDIR /app
 
-ADD . /app
-
-RUN pip install -r requirements.txt
-
 ARG EMAIL_ADDRESS
 ARG EMAIL_PASSWORD
 ARG EMAIL_SMTP_PORT="587"
@@ -32,5 +28,7 @@ COPY "./main.py" /app/main.py
 COPY "./requirements.txt" /app/requirements.txt
 COPY ${OCI_KEY_FILE_PATH} /app/private_key.pem
 COPY ${REQUEST_JSON_PATH} /app/request.json
+
+RUN pip install -r requirements.txt
 
 CMD ["python", "main.py"]
