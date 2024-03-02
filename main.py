@@ -10,7 +10,7 @@ import requests
 
 REQUEST_URL_TEMPLATE = "https://iaas.{region}.oraclecloud.com/20160918/instances/"
 INVALID_RESPONSES = [
-    {"code": "InternalError", "message": "Out of host capaciy."},
+    {"code": "InternalError", "message": "Out of host capacity."},
     {"code": "InternalError", "message": "TooManyRequests"},
 ]
 
