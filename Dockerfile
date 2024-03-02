@@ -31,4 +31,4 @@ COPY ${REQUEST_JSON_PATH} /app/request.json
 
 RUN pip install -r requirements.txt
 
-CMD ["python", "main.py"]
+ENTRYPOINT ["python", "main.py"]
