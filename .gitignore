@@ -4,3 +4,4 @@ __pycache__
 !Dockerfile
 !main.py
 !README.md
+!requirements.txt
